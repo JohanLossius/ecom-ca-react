@@ -6,11 +6,11 @@ import React from 'react';
 import { Routes, Route, Link, Outlet, useParams } from "react-router-dom";
 
 function Logo() {
-  // let params = useParams()
-  // console.log(params)
-  // // Logs the id of whichever product page you are on e.g.
-  // // {id: '1'} or {id: '2'}
-  // return <div>Individual product page: {params.id}</div>
+  return (
+    <div>
+      <Link to="/"><img src="/logo/logo.jpg" alt="logo" className="logo" /></Link>
+    </div>
+  );
 }
 
 function Nav() {
@@ -32,11 +32,11 @@ function Nav() {
 }
 
 function CartIcon() {
-  // let params = useParams()
-  // console.log(params)
-  // // Logs the id of whichever product page you are on e.g.
-  // // {id: '1'} or {id: '2'}
-  // return <div>Individual product page: {params.id}</div>
+  return (
+    <div>
+      <Link to="/ProductPage"><img src="/logo-cart.jpg" alt="Shopping cart" className="shopping-cart-class"/></Link>
+    </div>
+  )
 }
 
 // Our header component that gets used in our <Layout> component
@@ -52,7 +52,7 @@ function Header() {
 
 // Our footer component that gets used in our <Layout> component
 function Footer() {
-  return <footer>Website footer</footer>
+  return <footer>Footer: Wow, this is such a creative piece of work!</footer>
 }
 
 // Front page with products
@@ -64,16 +64,16 @@ function Home() {
   ];
 
   return (
-    <div>
+    <main>
       <h2>Here are all our Products:</h2>
-      <ul>
+      <div>
         {productList.map(product => (
-          <li key={product.id}>
+          <div key={product.id}>
             <Link to={`/product/${product.id}`}>{product.title}</Link>
-          </li>
+          </div>
         ))}
-      </ul>
-    </div>
+      </div>
+    </main>
   );
 }
 
@@ -82,7 +82,7 @@ function ProductPage() {
   console.log(params)
   // Logs the id of whichever product page you are on e.g.
   // {id: '1'} or {id: '2'}
-  return <div>Individual product page: {params.id}</div>
+  return <main>Individual product page: {params.id}</main>
 }
 
 function CheckoutPage() {
@@ -90,7 +90,7 @@ function CheckoutPage() {
   console.log(params)
   // Logs the id of whichever product page you are on e.g.
   // {id: '1'} or {id: '2'}
-  return <div>Individual product page: {params.id}</div>
+  return <main>Individual product page: {params.id}</main>
 }
 
 function CheckoutSuccessPage() {
@@ -98,21 +98,21 @@ function CheckoutSuccessPage() {
   console.log(params)
   // Logs the id of whichever product page you are on e.g.
   // {id: '1'} or {id: '2'}
-  return <div>Individual product page: {params.id}</div>
+  return <main>Individual product page: {params.id}</main>
 }
 
 function ContactPage() {
   return  (
-          <div>
+          <main>
             <h1>Contact us</h1>
             <p>Email: xyz@abc.com</p>
             <p>Phone: +47 123 45 678</p>
-          </div>
+          </main>
   );
 }
 
 function RouteNotFound() {
-  return <div>Page not found</div>
+  return <main>Page not found</main>
 }
 
 // The <Outlet> from react-router-dom displays any child routes, almost like
