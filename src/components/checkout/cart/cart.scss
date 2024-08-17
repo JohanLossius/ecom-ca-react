@@ -1,0 +1,30 @@
+.cart-item-price-cont {
+  display: flex;
+  justify-content: center;
+  margin: 5px auto;
+}
+
+.cart-item-price-cont > span {
+  margin: 5px;
+}
+
+.cart-product-card {
+  display: flex;
+  flex-direction: column;
+  background-color:antiquewhite;
+  border-radius: 25px;
+  width: 40%;
+  height: auto;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.cart-total-cont {
+  background-color: brown;
+  color: white;
+  border-radius: 25px;
+  width: 40%;
+  margin: 15px auto;
+  padding: 15px;
+  font-weight: bold;
+}

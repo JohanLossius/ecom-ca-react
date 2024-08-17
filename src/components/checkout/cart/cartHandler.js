@@ -1,40 +1,32 @@
-// import React from "react";
-// import { useState, useContext } from "react";
-// import CartContext, { CartProvider } from "./cartContext.js";
+import React from "react";
+import { useState, useContext, useEffect } from "react";
+import CartContext from "./cartContext.js";
+import { set } from "react-hook-form";
 
+function CartHandler() {
+  const { cartProducts, setCartProducts, cartTotal, setCartTotal } = useContext(CartContext);
 
+  function addProductToCart(product) {
+    setCartProducts([...cartProducts, product]);
+  }
 
-// import React from "react";
-// import { useState, useEffect } from "react";
-// import CartStates from "./cartStates.js";
+  function removeProductFromCart(product) {
+    const updatedCart = cartProducts.filter((item) => item.id !== product.id); // ???????
+    setCartProducts(updatedCart);
+  }
 
-// function CartHandler() {
-//   const { cartProducts, setCartProducts, cartTotal, setCartTotal } = CartStates();
+  useEffect(() => {
+  function cartCalculator() {
+    let sum = 0;
+    cartProducts.forEach((product) => {
+      sum += product.discountedPrice;
+    });
+    setCartTotal(sum);
+  };
+  cartCalculator();
+  }, [cartProducts, setCartTotal]);
 
-//   // Cart products handling
-//   function addProductToCart(product) {
-//     setCartProducts([...cartProducts, product]);
-//   };
+  return { addProductToCart, removeProductFromCart };
+}
 
-//   function removeProductFromCart(product) {
-//     const updatedCart = cartProducts.filter((item) => item.id !== product.id); // ???
-//     setCartProducts(updatedCart);
-//   }
-
-//   // Cart calculator
-//   const calculateTotal = () => {
-//     let sum = 0;
-//     cartProducts.forEach((product) => {
-//       sum += product.discountedPrice;
-//     });
-//     setCartTotal(sum);
-//   };
-
-//   useEffect(() => {
-//     calculateTotal();
-//   }, [cartProducts]);
-
-//   return { addProductToCart, removeProductFromCart };
-// };
-
-// export default CartHandler;
+export default CartHandler;

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import "./checkoutSuccess.scss";
-import clearCart from '../checkout/cart/clearCart';
+import ClearCart from '../checkout/cart/clearCart';
 
 function CheckoutSuccess() {
-  clearCart();
+  <ClearCart />
   return (
     <main>
       <h3>Thank you for your purchase!</h3>
