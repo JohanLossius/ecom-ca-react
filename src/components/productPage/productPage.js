@@ -55,9 +55,7 @@ function ProductPage() {
           </ul>
           <button onClick={() => addProductToCart(product)} className="cta-button">
             Add to cart
-            {console.log('Button clicked')} 
             </button>
-          {console.log("product:", product)}
           <Link to="/checkout/" className="cta-link"><button className="cta-button">See cart and purchase</button></Link>
         </div>
       </div>

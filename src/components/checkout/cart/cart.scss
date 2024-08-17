@@ -1,5 +1,6 @@
 .cart-item-price-cont {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 5px auto;
 }
@@ -26,5 +27,12 @@
   width: 40%;
   margin: 15px auto;
   padding: 15px;
+  font-weight: bold;
+}
+
+.counter-button {
+  background-color: brown;
+  padding: 7px;
+  color: white;
   font-weight: bold;
 }
