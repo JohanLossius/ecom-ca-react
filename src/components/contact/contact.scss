@@ -1,0 +1,26 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+label, input {
+  width: 50%;
+  max-width: 250px;
+  height: auto;
+  margin: 10px auto;
+}
+
+label {
+  font-weight: bold;
+  font-size: large;
+}

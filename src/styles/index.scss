@@ -12,24 +12,17 @@ code {
     monospace;
 }
 
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 50px;
-}
+// .logo {
+//   width: 100px;
+//   height: 100px;
+//   margin: 0 auto;
+// }
 
-.logo {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-}
-
-.shopping-cart-class {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-}
+// .shopping-cart-class {
+//   width: 100px;
+//   height: 100px;
+//   margin: 0 auto;
+// }
 
 main {
   display: flex;
@@ -39,10 +32,21 @@ main {
   margin: auto;
 }
 
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+h1, h2, h3, h4 {
+  text-align: center;
+}
+
+.cta-button {
+  width: 100px;
+  height: auto;
+  margin: 5px auto;
+  padding: 10px;
+  font-size: large;
   font-weight: bold;
-  margin-top: 50px;
+  border-radius: 25px;
+}
+
+.cta-link {
+  text-align: center;
+  margin: 0 auto;
 }

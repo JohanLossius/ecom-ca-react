@@ -1,0 +1,24 @@
+.shopping-cart-class {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.products-in-cart-div {
+  margin: auto;
+}
+
+.cart-icon-a-tag {
+  display: flex;
+  flex-direction: column;
+  margin: 3px auto;
+  background-color:antiquewhite;
+  border-radius: 25px;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.product-count-cart {
+  font-size: x-large;
+  font-weight: bold;
+}
