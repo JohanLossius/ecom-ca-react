@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "react-app",
+    "react-app/jest"
+  ],
+  "rules": {
+    "no-console": "warn",              // Treat console statements as warnings
+    "no-unused-vars": "warn",         // Treat unused variables as warnings
+    "no-debugger": "warn",            // Treat debugger statements as warnings
+    "react/prop-types": "warn",       // Treat missing prop types as warnings
+    "react/jsx-uses-react": "warn",   // Treat React usage in JSX as warnings
+    "react/jsx-uses-vars": "warn",    // Treat unused variables in JSX as warnings
+    "no-undef": "warn",               // Treat undefined variables as warnings
+    "eqeqeq": ["warn", "always"],     // Require === and !== for comparisons
+    "no-var": "warn",                 // Suggest using let or const instead of var
+    "prefer-const": "warn"            // Suggest using const for variables that are never reassigned
+  },
+  "ignorePatterns": ["*.js"],          // Optional: Ignore specific patterns
+  "overrides": [
+    {
+      "files": ["*.js", "*.jsx"],
+      "env": {
+        "browser": true,
+        "es2021": true
+      },
+      "rules": {
+        // Customize rules for specific files or environments
+      }
+    }
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"  // Automatically detect the React version
+    }
+  }
+}
