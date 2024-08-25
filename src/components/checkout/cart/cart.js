@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";	
 import CartContext from "./cartContext.js";
@@ -13,7 +12,7 @@ function Cart() {
   
   return (
           <div>
-            <img src="/logo/logo-cart.jpg" alt="Shopping cart image" className="shopping-cart-class"/>
+            <img src="/logo/logo-cart.jpg" alt="Shopping cart" className="shopping-cart-class"/>
               {cartProducts.length >= 1 ? (
                 <div>
                   <div className="cart-products-cont">
