@@ -14,17 +14,6 @@ function CartHandler() {
     setCartProducts(updatedCart);
   }
 
-  // function reduceQuantity(productId) {
-  //   const cartProductsCopy = [...cartProducts];
-  //   const productIndex = cartProductsCopy.findIndex((item) => item.id === product.id);
-  //   const productToReduce = cartProductsCopy[productIndex];
-
-  //   const updatedCart = cartProducts.splice(productIndex, 1);
-
-  //   removeProductFromCart(productToReduce);
-
-  // }
-
   function reduceQuantity(productId) {
     const cartProductsCopy = [...cartProducts];
     const indexToRemove = cartProductsCopy.findIndex((item) => item.id === productId);

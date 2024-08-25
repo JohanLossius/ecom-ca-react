@@ -32,6 +32,7 @@ const schema = yup
   .required();
 
 function Contact() {
+  const [submittedData, setSubmittedData] = useState(null);
   const {
     register,
     handleSubmit,
@@ -39,6 +40,7 @@ function Contact() {
       { errors },
       trigger,
       getValues,
+      reset,
   } = useForm({
     resolver: yupResolver(schema),
   });
@@ -62,38 +64,63 @@ function Contact() {
     }
   };
 
-  function onSubmit(data) {
+  function onSubmitHandler(data) {
     console.log("onSubmit data:", data);
+    setSubmittedData(data);
+    reset();
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <label htmlFor="fullName">Your full name</label>
-      <input
-        {...register("fullName")}
-        onBlur={() => handleBlur("fullName")}
-      />
-      <p className="error-message">{errors.fullName?.message}</p>
-      <label htmlFor="email">Your email</label>
-      <input
-        {...register("email")}
-        onBlur={() => handleBlur("email")}
-      />
-      <p className="error-message">{errors.email?.message}</p>
-      <label htmlFor="subject">Your subject</label>
-      <input
-        {...register("subject")}
-        onBlur={() => handleBlur("subject")}
-      />
-      <p className="error-message">{errors.subject?.message}</p>
-      <label htmlFor="body">Your message</label>
-      <input
-        {...register("body")}
-        onBlur={() => handleBlur("body")}
-      />
-      <p className="error-message">{errors.body?.message}</p>
-      <input type="submit" />
-    </form>
+    <main>
+      <section className="feedback-cont">
+        {submittedData ? (
+          <div>
+            <h2 className="success-message">Your message was successfully sent!</h2>
+            <h3>The following was submitted:</h3>
+            <div className="submitted-data-cont">
+              <p>Name: <span className="submitted-data-span">{submittedData.fullName}</span></p>
+              <p>Email: <span className="submitted-data-span">{submittedData.email}</span></p>
+              <p>Subject: <span className="submitted-data-span">{submittedData.subject}</span></p>
+              <p>Message: <span className="submitted-data-span">{submittedData.body}</span></p>
+            </div>
+            <p>We'll have the sloths run through the paperwork asap, and at the latest in 60 working days.</p>
+            <p>Do you need a quicker feedback? Call for the owls.</p>
+          </div>
+        ) : (
+          <div>
+            <h2>Contact form</h2>
+            <p>Fill in the form below to send us a message.</p>
+          </div>
+        )}
+      </section>
+      <form onSubmit={handleSubmit(onSubmitHandler)}>
+        <label htmlFor="fullName">Your full name</label>
+        <input
+          {...register("fullName")}
+          onBlur={() => handleBlur("fullName")}
+        />
+        <p className="error-message">{errors.fullName?.message}</p>
+        <label htmlFor="email">Your email</label>
+        <input
+          {...register("email")}
+          onBlur={() => handleBlur("email")}
+        />
+        <p className="error-message">{errors.email?.message}</p>
+        <label htmlFor="subject">Your subject</label>
+        <input
+          {...register("subject")}
+          onBlur={() => handleBlur("subject")}
+        />
+        <p className="error-message">{errors.subject?.message}</p>
+        <label htmlFor="body">Your message</label>
+        <input
+          {...register("body")}
+          onBlur={() => handleBlur("body")}
+        />
+        <p className="error-message">{errors.body?.message}</p>
+        <input type="submit" />
+      </form>
+    </main>
   );
 }
 

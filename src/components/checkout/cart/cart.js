@@ -30,7 +30,10 @@ function Cart() {
                         </span>
                         <span>Total: {productObject.quantity * productObject.productData.discountedPrice}</span>
                       </div>
-                      <button onClick={() => removeProductFromCart(productObject.productData)} className="cta-button">Remove from cart</button>
+                      <div className="button-cont-cart">
+                        <Link to={`/product/${productObject.id}`} className="cta-link"><button className="cta-button">Visit product page</button></Link>
+                        <button onClick={() => removeProductFromCart(productObject.productData)} className="cta-button">Remove from cart</button>
+                      </div>
                     </div>
                   ))}
                   </div>
