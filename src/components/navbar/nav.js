@@ -1,15 +1,15 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import "./nav.scss"; // unused currently
+import { NavLink } from "react-router-dom";
+import "./nav.scss";
 
 function Nav() {
   return (
     <nav>
-      <div>
-        <Link to="/">Home</Link>
+      <div className="nav-item-div">
+        <NavLink exact to="/" activeClassName="active">Home</NavLink>
       </div>
-      <div>
-        <Link to="/contact">Contact</Link>
+      <div className="nav-item-div">
+        <NavLink exact to="/contact" activeClassName="active">Contact</NavLink>
       </div>
     </nav>
   )

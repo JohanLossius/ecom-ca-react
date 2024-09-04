@@ -6,7 +6,7 @@ import "./logo.scss";
 function Logo() {
   return (
     <div>
-      <Link to="/"><img src="/logo/logo.jpg" alt="logo" className="logo" /></Link>
+      <Link to="/"><img src="/logo/logo2.png" alt="logo" className="logo" /></Link>
     </div>
   );
 }

@@ -1,3 +1,8 @@
+@use "../../styles/breakpoints";
+@use "../../styles/variables";
+
+// These styles are imported directly into App.js, and as such will apply to all components.
+
 .product-card-img {
   width: 50%;
   height:auto;
@@ -20,38 +25,69 @@
   flex-direction: column;
   padding: 10px;
   margin: 10px auto;
-  background-color:bisque;
+  background-color: variables.$secondary;
   border-radius: 25px;
-  width: 25%;
+  width: 40%;
   height:auto;
   min-width: 50px;
   min-height: 50px;
+  @include breakpoints.lg {
+    width: 60%;
+  }
+  @include breakpoints.md {
+    width: 70%;
+  }
+  @include breakpoints.sm {
+    width: 80%;
+  }
+  @include breakpoints.xs {
+    width: 95%;
+    margin: 5px auto;
+  }
 }
 
 .search-bar-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  width: 40%;
   height: auto;
-  padding: 5px;
   min-width: 50px;
   margin: 5px auto;
+  @include breakpoints.lg {
+    width: 60%;
+  }
+  @include breakpoints.md {
+    width: 70%;
+  }
+  @include breakpoints.sm {
+    width: 80%;
+  }
+  @include breakpoints.xs {
+    width: 95%;
+    margin: 5px auto;
+  }
 }
 
 .search-bar {
   border-radius: 25px;
-  background-color: blanchedalmond;
+  background-color: variables.$secondary;
   padding: 15px;
-  max-width: 500px;
-  width: 80%;
+  max-width: 1000px;
+  width: 95%;
   height: auto;
+}
+
+.quick-search-title {
+  margin: 2px auto;
 }
 
 .search-suggestions-cont {
   display: flex;
   justify-content: center;
-  width: 50%;
+  width: 95%;
+  max-width: 1000px;
+  // padding: 15px;
   height: auto;
   margin: 5px auto;
 }
@@ -63,14 +99,37 @@
 }
 
 .search-suggestions-sub-cont {
-  width: 80%;
+  width: 95%;
   height: auto;
 }
+
 .search-a-tag {
   text-align: center;
   width: 100%;
+  padding: 10px;
+  @include breakpoints.sm {
+    padding: 5px;
+  }
 }
 
 .quick-search-view-btn, .span-search {
   margin: auto 10px;
+}
+
+.quick-search-view-btn {
+  width: 150px;
+  height: auto;
+  padding: 10px;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 25px;
+  background-color: variables.$primary;
+  color: variables.$tertiary;
+  @include breakpoints.md {
+    width: 125px;
+  }
+}
+
+.span-search {
+  font-weight: bold;
 }

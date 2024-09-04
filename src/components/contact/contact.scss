@@ -1,3 +1,6 @@
+@use "../../styles/breakpoints";
+@use "../../styles/variables";
+
 form {
   display: flex;
   flex-direction: column;
@@ -5,27 +8,35 @@ form {
   text-align: center;
   margin: auto;
   width: 50%;
-  max-width: 500px;
+  max-width: 700px;
+  @include breakpoints.md {
+    width: 80%;
+  }
+  @include breakpoints.sm {
+    width: 90%;
+  }
 }
 
 .success-message {
-  color: green;
+  color: variables.$success;
   font-weight: bold;
   text-align: center;
   margin-bottom: 15px;
 }
 
 .error-message {
-  color: red;
+  color: variables.$error;
   font-weight: bold;
   text-align: center;
   margin-bottom: 15px;
 }
 
 label, input {
-  width: auto;
   height: auto;
-  margin: 10px auto;
+  width: 95%;
+  margin: auto;
+  border-radius: 25px;
+  padding: 10px;
 }
 
 label {

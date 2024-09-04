@@ -13,6 +13,11 @@ function Header() {
       <Nav />
       <CartIcon />
     </header>
+    // <section>
+    //   <span>You are here: </span>
+    //   <h1>Our Store</h1>
+    //   <p>Welcome to our store! We have the best products in the world. Buy them now!</p>
+    // </section>
   )
 }
 

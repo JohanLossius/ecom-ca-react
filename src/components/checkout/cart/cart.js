@@ -12,7 +12,7 @@ function Cart() {
   
   return (
           <div>
-            <img src="/logo/logo-cart.jpg" alt="Shopping cart" className="shopping-cart-class"/>
+            <img src="/logo/logo-cart.jpg" className="shopping-cart-class"/>
               {cartProducts.length >= 1 ? (
                 <div>
                   <div className="cart-products-cont">
@@ -22,16 +22,16 @@ function Cart() {
                       <img src={productObject.productData.image.url} alt={productObject.productData.title} className="product-card-img"/>
                       <div className="cart-item-price-cont">
                         <span>Price: {productObject.productData.discountedPrice} NOK</span>
-                        <span>
-                          <button className="counter-button" onClick={() => addProductToCart(productObject.productData)}>+</button>
-                          <div>Quantity: {productObject.quantity}</div>
+                        <span className="quantity-cont">
                           <button className="counter-button" onClick={() => reduceQuantity(productObject.id)}>-</button>
+                          <div>Quantity: {productObject.quantity}</div>
+                          <button className="counter-button" onClick={() => addProductToCart(productObject.productData)}>+</button>
                         </span>
                         <span>Total: {productObject.quantity * productObject.productData.discountedPrice}</span>
                       </div>
                       <div className="button-cont-cart">
-                        <Link to={`/product/${productObject.id}`} className="cta-link"><button className="cta-button">Visit product page</button></Link>
-                        <button onClick={() => removeProductFromCart(productObject.productData)} className="cta-button">Remove from cart</button>
+                        <Link to={`/product/${productObject.id}`} className="cta-link button-cont"><button className="cta-button">Visit product page</button></Link>
+                        <div className="button-cont"><button onClick={() => removeProductFromCart(productObject.productData)} className="cta-button">Remove from cart</button></div>
                       </div>
                     </div>
                   ))}

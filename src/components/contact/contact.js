@@ -118,7 +118,7 @@ function Contact() {
           onBlur={() => handleBlur("body")}
         />
         <p className="error-message">{errors.body?.message}</p>
-        <input type="submit" />
+        <input type="submit" className="cta-general" />
       </form>
     </main>
   );

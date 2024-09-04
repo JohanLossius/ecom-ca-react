@@ -1,0 +1,10 @@
+@use "../../styles/breakpoints";
+
+.checkout-success-main {
+  @include breakpoints.md {
+    width: 80%;
+    margin: 10px;
+    min-height: 350px;
+    margin: auto;
+  }
+}

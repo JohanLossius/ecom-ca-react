@@ -54,7 +54,7 @@ function ProductCards() {
           <div className="search-suggestions-cont">
             {filteredProducts.length >= 1 && query.length >= 2 ? (
               <div className="search-suggestions-sub-cont">
-                <h4>Quick search results:</h4>
+                <h4 className="quick-search-title">Quick search results:</h4>
                 {filteredProducts.map((product) => (
                   <Link key={product.id} to={`/product/${product.id}`} className="search-a-tag">
                     <div className="search-suggestion-div">

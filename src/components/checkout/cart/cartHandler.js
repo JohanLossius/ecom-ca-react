@@ -35,7 +35,8 @@ function CartHandler() {
     cartProducts.forEach((product) => {
       sum += product.discountedPrice;
     });
-    setCartTotal(sum);
+    let sumFixed = sum.toFixed(2);
+    setCartTotal(sumFixed);
   };
   cartCalculator();
   }, [cartProducts, setCartTotal]);

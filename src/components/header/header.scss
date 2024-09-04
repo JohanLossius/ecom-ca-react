@@ -1,10 +1,17 @@
+@use "../../styles/breakpoints";
+
 header {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   padding: 0 12.5px;
   margin-bottom: 25px;
   width: 40%;
   min-width: 350px;
   margin: auto;
+  @include breakpoints.sm {
+    width: 80%;
+    min-width: 250px;
+  }
 }

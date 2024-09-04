@@ -1,8 +1,36 @@
+@use "../../styles/breakpoints";
+@use "../../styles/variables";
+
 nav {
   margin: auto;
-  // text-align: center;
+  text-align: center;
   align-items: center;
+  font-size: large;
+  font-weight: bold;
   background-color: antiquewhite;
   border-radius: 25px;
   padding: 15px;
+  width: 50%;
+  height: auto;
+  min-height: 50px;
+  min-width: 80px;
+  @include breakpoints.md {
+    width: 80%;
+    min-width: none;
+  }
+  @include breakpoints.sm {
+    width: 90%;
+    min-height: none;
+  }
+}
+
+.nav-item-div {
+  margin: 2px auto;
+}
+
+.active {
+  background-color: variables.$primary;
+  color: variables.$tertiary;
+  padding: 3px 17px;
+  border-radius: 25px;
 }
