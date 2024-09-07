@@ -46,9 +46,9 @@ function ProductPage() {
             )}
           <img src={product.image.url} alt={product.title} className="product-card-img"/>
           <h3>Reviews:</h3>
-          <ul>
+          <ul className="reviews-ul">
             {product.reviews.map(review => (
-            <li key={review.id}>
+            <li key={review.id} className="reviews-li">
               <strong>{review.username}:</strong> {review.description} Rating: {review.rating}
             </li>
             ))}

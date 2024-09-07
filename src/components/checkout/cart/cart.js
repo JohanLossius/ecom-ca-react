@@ -12,7 +12,7 @@ function Cart() {
   
   return (
           <div>
-            <img src="/shopping-cart-icon3.png" className="shopping-cart-class"/>
+            <img src="/shopping-cart-icon3.png" className="shopping-cart-class shopping-cart-title"/>
               {cartProducts.length >= 1 ? (
                 <div>
                   <div className="cart-products-cont">
@@ -43,7 +43,7 @@ function Cart() {
                 </div>
                 ) : (
                 <div>
-                  <h4>Oh no!! Your cart is empty!! Maybe the rattlesnakes been gobblin' again.</h4>
+                  <h4>Oh no!! Your cart is empty!!</h4>
                   <Link to={`/`} className="cta-link"><button className="cta-button">Back to Store</button></Link>
                 </div>
               )}

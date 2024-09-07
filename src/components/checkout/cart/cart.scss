@@ -8,6 +8,14 @@
   margin: 5px auto;
   font-weight: bold;
   font-size: large;
+  @include breakpoints.mobile-landscape {
+    flex-direction: row;
+    align-items: center;
+  }
+  @include breakpoints.ipad-landscape {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .cart-item-price-cont > span {
@@ -28,15 +36,28 @@
   }
   @include breakpoints.md {
     width: 80%;
+    padding: 5px;
   }
   @include breakpoints.sm {
     width: 90%;
     flex-direction: column;
     margin: 3px auto;
+    padding: 3px;
   }
   @include breakpoints.xs {
     width: 92%;
     margin: 1px auto;
+    padding: 2px;
+  }
+  @include breakpoints.mobile-landscape {
+    width: 95%;
+    padding: 2px;
+    margin: 2px auto;
+  }
+  @include breakpoints.ipad-landscape {
+    width: 95%;
+    padding: 2px;
+    margin: 2px auto;
   }
 }
 
@@ -89,4 +110,13 @@
   justify-content: center;
   align-items: center;
   margin: 5px auto;
+}
+
+.shopping-cart-title {
+  @include breakpoints.mobile-landscape {
+    display: none;
+  }
+  @include breakpoints.ipad-landscape {
+    display: none;
+  }
 }

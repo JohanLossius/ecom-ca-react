@@ -28,6 +28,12 @@ form {
   @include breakpoints.sm {
     margin-bottom: 5px;
   }
+  @include breakpoints.mobile-landscape {
+    margin-bottom: 2px;
+  }
+  @include breakpoints.ipad-landscape {
+    margin-bottom: 2px;
+  }
 }
 
 .error-message {
@@ -40,6 +46,12 @@ form {
   }
   @include breakpoints.sm {
     margin-bottom: 5px;
+  }
+  @include breakpoints.mobile-landscape {
+    margin-bottom: 2px;
+  }
+  @include breakpoints.ipad-landscape {
+    margin-bottom: 2px;
   }
 }
 
@@ -54,6 +66,12 @@ label, input {
   }
   @include breakpoints.xs {
     padding: 2.5px;
+  }
+  @include breakpoints.mobile-landscape {
+    padding: 5px;
+  }
+  @include breakpoints.ipad-landscape {
+    padding: 10px;
   }
 }
 
