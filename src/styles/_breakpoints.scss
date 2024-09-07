@@ -5,6 +5,14 @@ $breakpoints: (
   "lg": 1200px,
   "xl": 1600px,
   "xxl": 1601px,
+  // "min-landscape-height": 300px,
+  // "max-landscape-height": 500px,
+  "min-landscape-width": 700px,
+  "max-landscape-width": 1000px,
+  "ipad-landscape-max-width": 1200px,
+  "ipad-landscape-min-width": 1000px,
+  // "ipad-landscape-max-height": 950px,
+  // "ipad-landscape-min-height": 700px,
 );
 
 @mixin xs {
@@ -39,6 +47,18 @@ $breakpoints: (
 
 @mixin xxl {
   @media screen and (min-width: map-get($breakpoints, "xxl")) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape {
+  @media screen and (min-width: map-get($breakpoints, "min-landscape-width")) and (max-width: map-get($breakpoints, "max-landscape-width")) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin ipad-landscape {
+  @media screen and (min-width: map-get($breakpoints, "ipad-landscape-min-width")) and (max-width: map-get($breakpoints, "ipad-landscape-max-width")) and (orientation: landscape) {
     @content;
   }
 }

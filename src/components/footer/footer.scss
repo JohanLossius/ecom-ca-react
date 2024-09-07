@@ -6,4 +6,11 @@ footer {
   justify-content: center;
   font-weight: bold;
   margin: 40px auto;
+  text-align: center;
+  @include breakpoints.lg {
+    margin: 30px auto;
+  }
+  @include breakpoints.sm {
+    margin: 15px auto;
+  }
 }

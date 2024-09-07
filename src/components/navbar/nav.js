@@ -9,7 +9,10 @@ function Nav() {
         <NavLink exact to="/" activeClassName="active">Home</NavLink>
       </div>
       <div className="nav-item-div">
-        <NavLink exact to="/contact" activeClassName="active">Contact</NavLink>
+        <NavLink exact to="/checkout/" activeClassName="active">Cart</NavLink>
+      </div>
+      <div className="nav-item-div">
+        <NavLink exact to="/contact/" activeClassName="active">Contact</NavLink>
       </div>
     </nav>
   )

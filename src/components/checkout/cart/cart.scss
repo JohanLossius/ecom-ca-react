@@ -32,9 +32,11 @@
   @include breakpoints.sm {
     width: 90%;
     flex-direction: column;
+    margin: 3px auto;
   }
   @include breakpoints.xs {
-    width: 95%;
+    width: 92%;
+    margin: 1px auto;
   }
 }
 

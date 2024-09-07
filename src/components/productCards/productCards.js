@@ -59,7 +59,7 @@ function ProductCards() {
                   <Link key={product.id} to={`/product/${product.id}`} className="search-a-tag">
                     <div className="search-suggestion-div">
                       <span className="span-search">{product.title}</span>
-                      <button className="cta-button quick-search-view-btn">View</button>
+                      <button className="quick-search-view-btn">View</button>
                     </div>
                   </Link>
                 ))}

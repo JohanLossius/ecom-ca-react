@@ -13,4 +13,3 @@ function ClearCart() {
 }
 
 export default ClearCart;
-

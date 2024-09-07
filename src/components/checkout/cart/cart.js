@@ -12,7 +12,7 @@ function Cart() {
   
   return (
           <div>
-            <img src="/logo/logo-cart.jpg" className="shopping-cart-class"/>
+            <img src="/shopping-cart-icon3.png" className="shopping-cart-class"/>
               {cartProducts.length >= 1 ? (
                 <div>
                   <div className="cart-products-cont">
