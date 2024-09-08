@@ -94,3 +94,24 @@ label {
   font-weight: bold;
   font-size: medium;
 }
+
+.span-contact {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  margin: 4px auto;
+}
+
+.p-contact {
+  text-align: center;
+  margin: auto;
+  margin: 4px auto;
+}
+
+.submitted-data-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}

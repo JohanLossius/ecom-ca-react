@@ -71,10 +71,12 @@ function ProductCards() {
           {filteredProducts.length >= 1 ? (
           filteredProducts.map((product) => (
             <div key={product.id} className="product-card">
-              <h2>{product.title}</h2>
-              <p>{product.description}</p>
-              <p>Discounted price: {product.discountedPrice} NOK</p>
-              <p>Discount: {product.price - product.discountedPrice} NOK</p>
+              <h2 className="h2-card">{product.title}</h2>
+              <div className="text-div-product-card">
+                <span>{product.description}</span>
+                <span>Discounted price: {product.discountedPrice} NOK</span>
+                <span>Discount: {product.price - product.discountedPrice} NOK</span>
+              </div>
               <img src={product.image.url} alt={product.title} className="product-card-img"/>
               <Link to={`/product/${product.id}`}><button className="cta-button">View product</button></Link>
               <button onClick={() => addProductToCart(product)} className="cta-button">Add to Cart</button>

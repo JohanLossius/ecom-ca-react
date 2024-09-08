@@ -7,3 +7,17 @@
 .reviews-ul, .reviews-li {
   text-align: center;
 }
+
+.reviews-ul {
+  width: 60%;
+  margin: 4px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include breakpoints.md {
+    width: 70%;
+  }
+  @include breakpoints.sm {
+    width: 80%;
+  }
+}

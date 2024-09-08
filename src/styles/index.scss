@@ -27,6 +27,21 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
+h2, h3 {
+  @include breakpoints.md {
+    margin: 5px auto;
+  }
+  @include breakpoints.sm {
+    margin: 2px auto;
+  }
+  @include breakpoints.mobile-landscape {
+    margin: 2px auto;
+  }
+  @include breakpoints.ipad-landscape {
+    margin: 2px auto;
+  }
+}
+
 a {
   color: variables.$tertiary;
   text-decoration: none;
@@ -56,6 +71,15 @@ a {
   @include breakpoints.xs {
     width: 150px;
     min-height: 40px;
+  }
+  @include breakpoints.mobile-landscape {
+    width: 150px;
+    min-height: 35px;
+    padding: 7px;
+  }
+  @include breakpoints.ipad-landscape {
+    width: 150px;
+    min-height: 35px;
   }
 }
 

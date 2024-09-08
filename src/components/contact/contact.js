@@ -78,18 +78,18 @@ function Contact() {
             <h2 className="success-message">Your message was successfully sent!</h2>
             <h3>The following was submitted:</h3>
             <div className="submitted-data-cont">
-              <p>Name: <span className="submitted-data-span">{submittedData.fullName}</span></p>
-              <p>Email: <span className="submitted-data-span">{submittedData.email}</span></p>
-              <p>Subject: <span className="submitted-data-span">{submittedData.subject}</span></p>
-              <p>Message: <span className="submitted-data-span">{submittedData.body}</span></p>
+              <span className="span-contact">Name: <span className="submitted-data-span">{submittedData.fullName}</span></span>
+              <span className="span-contact">Email: <span className="submitted-data-span">{submittedData.email}</span></span>
+              <span className="span-contact">Subject: <span className="submitted-data-span">{submittedData.subject}</span></span>
+              <span className="span-contact">Message: <span className="submitted-data-span">{submittedData.body}</span></span>
             </div>
-            <p>We'll have the sloths run through the paperwork asap, and at the latest in 60 working days.</p>
-            <p>Do you need a quicker feedback? Call for the owls.</p>
+            <p className="p-contact">We'll have the sloths run through the paperwork asap, and at the latest in 60 working days.</p>
+            <p className="p-contact">Do you need a quicker feedback? Call for the owls.</p>
           </div>
         ) : (
           <div>
             <h2>Contact form</h2>
-            <p>Fill in the form below to send us a message.</p>
+            <span className="span-contact">Fill in the form below to send us a message.</span>
           </div>
         )}
       </section>
@@ -99,25 +99,25 @@ function Contact() {
           {...register("fullName")}
           onBlur={() => handleBlur("fullName")}
         />
-        <p className="error-message">{errors.fullName?.message}</p>
+        <span className="error-message span-contact">{errors.fullName?.message}</span>
         <label htmlFor="email">Your email</label>
         <input
           {...register("email")}
           onBlur={() => handleBlur("email")}
         />
-        <p className="error-message">{errors.email?.message}</p>
+        <span className="error-message span-contact">{errors.email?.message}</span>
         <label htmlFor="subject">Your subject</label>
         <input
           {...register("subject")}
           onBlur={() => handleBlur("subject")}
         />
-        <p className="error-message">{errors.subject?.message}</p>
+        <span className="error-message span-contact">{errors.subject?.message}</span>
         <label htmlFor="body">Your message</label>
         <input
           {...register("body")}
           onBlur={() => handleBlur("body")}
         />
-        <p className="error-message">{errors.body?.message}</p>
+        <span className="error-message span-contact">{errors.body?.message}</span>
         <input type="submit" className="cta-general" />
       </form>
     </main>

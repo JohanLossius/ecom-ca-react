@@ -11,6 +11,10 @@
   max-height: 100px;
   min-width: 50px;
   min-height: 50px;
+  @include breakpoints.mobile-landscape {
+    max-width: 75px;
+    max-height: 75px;
+  }
 }
 
 .product-container {
@@ -46,9 +50,11 @@
   }
   @include breakpoints.mobile-landscape {
     width: 95%;
+    padding: 3px;
   }
   @include breakpoints.ipad-landscape {
     width: 80%;
+    padding: 3px;
   }
 }
 
@@ -110,7 +116,6 @@
   justify-content: center;
   width: 95%;
   max-width: 1000px;
-  // padding: 15px;
   height: auto;
   margin: 5px auto;
 }
@@ -155,4 +160,22 @@
 
 .span-search {
   font-weight: bold;
+}
+
+.text-div-product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.h2-card {
+  margin: 2px auto;
+}
+
+.text-div-product-card span {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  margin: 2.5px auto;
 }

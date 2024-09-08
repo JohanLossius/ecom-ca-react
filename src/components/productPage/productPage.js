@@ -38,12 +38,14 @@ function ProductPage() {
     return (
       <div className="product-container">
         <div key={product.id} className="product-card">
-          <h2>{product.title}</h2>
-          <p>{product.description}</p>
-          <p>Discounted price: {product.discountedPrice} NOK</p>
-          {product.price - product.discountedPrice > 0 && (
-            <p>You save: {product.price - product.discountedPrice} NOK</p>
-            )}
+          <h2 className="h2-card">{product.title}</h2>
+          <div className="text-div-product-card">
+            <span>{product.description}</span>
+            <span>Discounted price: {product.discountedPrice} NOK</span>
+            {product.price - product.discountedPrice > 0 && (
+              <span>You save: {product.price - product.discountedPrice} NOK</span>
+              )}
+          </div>
           <img src={product.image.url} alt={product.title} className="product-card-img"/>
           <h3>Reviews:</h3>
           <ul className="reviews-ul">
