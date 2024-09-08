@@ -47,7 +47,9 @@ function ProductPage() {
               )}
           </div>
           <img src={product.image.url} alt={product.title} className="product-card-img"/>
-          <h3>Reviews:</h3>
+          {product.reviews.length > 0 && (
+              <h3>Reviews:</h3>
+              )}
           <ul className="reviews-ul">
             {product.reviews.map(review => (
             <li key={review.id} className="reviews-li">
