@@ -94,28 +94,32 @@ function Contact() {
         )}
       </section>
       <form onSubmit={handleSubmit(onSubmitHandler)}>
-        <label htmlFor="fullName">Your full name</label>
+        <label htmlFor="full-name-id">Your full name</label>
         <input
           {...register("fullName")}
           onBlur={() => handleBlur("fullName")}
+          id="full-name-id"
         />
         <span className="error-message span-contact">{errors.fullName?.message}</span>
-        <label htmlFor="email">Your email</label>
+        <label htmlFor="email-id">Your email</label>
         <input
           {...register("email")}
           onBlur={() => handleBlur("email")}
+          id="email-id"
         />
         <span className="error-message span-contact">{errors.email?.message}</span>
-        <label htmlFor="subject">Your subject</label>
+        <label htmlFor="subject-id">Your subject</label>
         <input
           {...register("subject")}
           onBlur={() => handleBlur("subject")}
+          id="subject-id"
         />
         <span className="error-message span-contact">{errors.subject?.message}</span>
-        <label htmlFor="body">Your message</label>
+        <label htmlFor="body-id">Your message</label>
         <input
           {...register("body")}
           onBlur={() => handleBlur("body")}
+          id="body-id"
         />
         <span className="error-message span-contact">{errors.body?.message}</span>
         <input type="submit" className="cta-general" />
