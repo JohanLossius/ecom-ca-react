@@ -3,7 +3,9 @@ Johan Lossius eCommerce store for the React Course Assignment, Frontend Framewor
 
 # Styling
 SCSS (SASS) is used with modular styling files.
-**Note from Johan: The browser gives the following warning: "Layout was forced before the page was fully loaded. If stylesheets are not yet loaded this may cause a flash of unstyled content." Hence I understand there is something about the styling setup that could've or should've been fixed or optimized. I'll sort that out for the next app I build in react."**
+
+**Note from Johan regarading styling:**
+The browser gives the following warning: "Layout was forced before the page was fully loaded. If stylesheets are not yet loaded this may cause a flash of unstyled content." Hence I understand there is something about the styling setup that could've or should've been fixed or optimized. I'll sort that out for the next app I build in react.
 
 # Getting Started with Create React App
 
@@ -19,8 +21,11 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
-**Note from Johan: I have not been able to make the watch functionality work. So I have had to restart the dev server with "ctrl+C" and "npm run start" in the terminal each time checking new changes.**
+
 You may also see any lint errors in the console.
+
+**Note from Johan regarding watch changes:**
+I have not been able to make the watch functionality work. So I have had to restart the dev server with "ctrl+C" and "npm run start" in the terminal each time checking new changes.
 
 ### `npm test`
 
@@ -39,7 +44,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run eject`
 
-**Note from Johan: The eject command was run at some point in the development process of this react app. The reason for this was to troubleshoot some functionality/syntax that was not accessible without ejecting. As far as I remember, while troubleshooting the eslintrc.json file**
+**Note from Johan regarding eject**
+The eject command was run at some point in the development process of this react app. The reason for this was to troubleshoot some functionality/syntax that was not accessible without ejecting. As far as I remember, while troubleshooting the eslintrc.json file
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
