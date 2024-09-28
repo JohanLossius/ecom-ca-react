@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./checkout.scss";
-// import Cart from "./cart/cart.js";
 import Cart from "./cart/cart.js";
 
 function Checkout() {

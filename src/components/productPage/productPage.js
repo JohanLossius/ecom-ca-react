@@ -25,11 +25,11 @@ function ProductPage() {
   }
 
   if (isError) {
-    return <div>There was an error: {isError}. Have you spoken with the meercats?</div>; // Error messaging to be implemented, more than just true/false?
+    return <div>There was an error: {isError}. Have you spoken with the meercats?</div>;
   }
 
   if (product) {
-    console.log("Product: ", product);
+    // console.log("Product: ", product);
     return (
       <div className="product-container">
         <div key={product.id} className="product-card">
@@ -53,7 +53,7 @@ function ProductPage() {
             ))}
           </ul>
           <Link to="/checkout/" className="cta-link"><button className="cta-button">See cart and purchase</button></Link>
-          <button onClick={() => dispatch({ type: 'addProduct', payload: product })} className="cta-button">
+          <button onClick={() => dispatch({ type: "addProduct", payload: product })} className="cta-button">
             Add to cart
             </button>
         </div>

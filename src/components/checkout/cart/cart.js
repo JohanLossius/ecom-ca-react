@@ -7,11 +7,12 @@ function Cart() {
 
   const { state, dispatch } = useContext(CartContext);
 
-  useEffect(() => {
-    console.log("Cart state: ", JSON.stringify(state.cart));
-    console.log("Total price: ", JSON.stringify(state.totalPrice));
-    console.log("Product quantity ", JSON.stringify(state.productQuantity));
-  }, [state.cart, state.totalPrice, state.productQuantity]);
+  // Console logging functionality for debugging purposes
+  // useEffect(() => {
+  //   console.log("Cart state: ", JSON.stringify(state.cart));
+  //   console.log("Total price: ", JSON.stringify(state.totalPrice));
+  //   console.log("Product quantity ", JSON.stringify(state.productQuantity));
+  // }, [state.cart, state.totalPrice, state.productQuantity]);
 
   return (
     <div>
@@ -26,15 +27,15 @@ function Cart() {
                 <div className="cart-item-price-cont">
                   <span>Price: {product.discountedPrice} NOK</span>
                   <span className="quantity-cont">
-                    <button className="counter-button" onClick={() => dispatch({ type: 'removeProduct', payload: product })}>-</button>
+                    <button className="counter-button" onClick={() => dispatch({ type: "removeProduct", payload: product })}>-</button>
                     <div>Quantity: {product.quantity}</div>
-                    <button className="counter-button" onClick={() => dispatch({ type: 'addProduct', payload: product })}>+</button>
+                    <button className="counter-button" onClick={() => dispatch({ type: "addProduct", payload: product })}>+</button>
                   </span>
                   <span>Total: {maxTwoDecimals(product.quantity * product.discountedPrice)}</span>
                 </div>
                 <div className="button-cont-cart">
                   <Link to={`/product/${product.id}`} className="cta-link button-cont"><button className="cta-button">Visit product page</button></Link>
-                  <div className="button-cont"><button onClick={() => dispatch({ type: 'removeProductFully', payload: product })} className="cta-button">Remove from cart</button></div>
+                  <div className="button-cont"><button onClick={() => dispatch({ type: "removeProductFully", payload: product })} className="cta-button">Remove from cart</button></div>
                 </div>
               </div>
             ))}

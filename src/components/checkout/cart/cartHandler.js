@@ -14,16 +14,6 @@ export const CartProvider = ({ children }) => {
   );
 }
 
-export const useCart = () => {
-  const context = useContext(CartContext);
-
-  if (!context) {
-    throw new Error("Something wrong with the cart context. Check with the dogs.");
-  }
-
-  return context;
-}
-
 // Handle max 2 decimals functionality
 export function maxTwoDecimals(price) {
   if (price % 1 === 0) {
@@ -49,7 +39,7 @@ function cartReducer(state, action) {
 
   switch (action.type) {
     // Adding a product
-    case 'addProduct':
+    case "addProduct":
       // Create a new cart so we don't mutate our state
       cart = [...state.cart];
       // Get the product index
@@ -60,9 +50,7 @@ function cartReducer(state, action) {
         // If productIndex is -1, it doesn't exist so we add it
         cart.push({ ...action.payload, quantity: 1 });
       } else {
-        // The product does exist so we increase the quantity
-        // We do not want to mutate quantity so we are creating a new array with
-        // quantity incremented.
+        // If it does exist, we increase the quantity by 1
         cart = [
           ...cart.slice(0, productIndex),
           { ...cart[productIndex], quantity: cart[productIndex].quantity + 1 },
@@ -70,7 +58,7 @@ function cartReducer(state, action) {
         ];
       }
 
-      // Set the new total so we don't have to keep calculating it
+      // Set the new total
       newTotal = cart.reduce((currentTotal, product) => {
         currentTotal += product.discountedPrice * product.quantity;
         return currentTotal;
@@ -84,7 +72,7 @@ function cartReducer(state, action) {
       return { ...state, cart: cart, totalPrice: newTotal, productQuantity: newQuantity };
 
     // Removing a product
-    case 'removeProduct':
+    case "removeProduct":
       cart = [...state.cart];
       // Get the product index
       productIndex = cart.findIndex(
@@ -93,7 +81,7 @@ function cartReducer(state, action) {
       // If the product index is not -1 then it exists
       if (productIndex !== -1) {
         if (cart[productIndex].quantity > 1) {
-          // Remove 1 from quantity is quantity is higher than 1
+          // Remove 1 from quantity if quantity is higher than 1
           // We do not want to mutate cart so we recreate it
           cart = [
             ...cart.slice(0, productIndex),
@@ -125,7 +113,7 @@ function cartReducer(state, action) {
 
       return { ...state, cart: cart, totalPrice: newTotal, productQuantity: newQuantity };
 
-      case 'removeProductFully':
+      case "removeProductFully":
       cart = [...state.cart];
       // Get the product index
       productIndex = cart.findIndex(
@@ -136,7 +124,7 @@ function cartReducer(state, action) {
         ...cart.slice(0, productIndex),
         ...cart.slice(productIndex + 1),
       ];
-      // Set the new total so we don't have to keep calculating it
+      // Set the new total
       newTotal = cart.reduce((currentTotal, product) => {
         currentTotal += product.discountedPrice * product.quantity;
         return currentTotal;
@@ -149,8 +137,8 @@ function cartReducer(state, action) {
 
       return { ...state, cart: cart, totalPrice: newTotal, productQuantity: newQuantity };
 
-    // Clearing a cart
-    case 'clearCart':
+    // Clear the cart
+    case "clearCart":
       return { cart: [], totalPrice: 0, productQuantity: 0 };
 
     default:

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import "./productCards.scss";
 import ProductsApiStates from "../api/productsApiStates.js";
@@ -76,7 +76,7 @@ function ProductCards() {
               </div>
               <img src={product.image.url} alt={product.title} className="product-card-img"/>
               <Link to={`/product/${product.id}`}><button className="cta-button">View product</button></Link>
-              <button onClick={() => dispatch({ type: 'addProduct', payload: product })} className="cta-button">Add to cart</button>
+              <button onClick={() => dispatch({ type: "addProduct", payload: product })} className="cta-button">Add to cart</button>
             </div>
           ))) : (
             <div>Sorry, cabron! The hyenas ran away with part of our storage. There are no results that match your search!</div>
