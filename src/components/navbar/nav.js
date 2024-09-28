@@ -6,13 +6,14 @@ function Nav() {
   return (
     <nav>
       <div className="nav-item-div">
-        <NavLink exact to="/" activeClassName="active">Home</NavLink>
+        {/* <NavLink to="/" activeClassName="active">Home</NavLink> */}
+        <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}> Home</NavLink>
       </div>
       <div className="nav-item-div">
-        <NavLink exact to="/checkout/" activeClassName="active">Cart</NavLink>
+        <NavLink to="/checkout/" className={({ isActive }) => (isActive ? 'active' : '')}>Cart</NavLink>
       </div>
       <div className="nav-item-div">
-        <NavLink exact to="/contact/" activeClassName="active">Contact</NavLink>
+        <NavLink to="/contact/" className={({ isActive }) => (isActive ? 'active' : '')}>Contact</NavLink>
       </div>
     </nav>
   )

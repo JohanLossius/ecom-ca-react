@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./checkoutSuccess.scss";
-import ClearCart from '../checkout/cart/clearCart';
+import CartContext, { useCart } from "../checkout/cart/cartHandler.js";
 
 function CheckoutSuccess() {
-  ClearCart();
+
+  const { state, dispatch } = useContext(CartContext);
+
+  useEffect(() => {
+    dispatch({ type: 'clearCart' });
+  }, []);
 
   return (
     <main className="checkout-success-main">

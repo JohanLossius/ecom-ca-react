@@ -1,21 +1,15 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./productPage.scss";
 import SingleProductApiStates from "../api/singleProductApiState.js";
 import apiUrl from "../api/api.js";
-import CartContext from "../checkout/cart/cartContext.js";
-import { useContext } from "react";
+import CartContext, { useCart, maxTwoDecimals } from "../checkout/cart/cartHandler.js";
 
 // Product page output
 function ProductPage() {
 
   // Cart context
-  const { cartProducts, setCartProducts } = useContext(CartContext);
-
-  function addProductToCart(product) {
-    setCartProducts([...cartProducts, product]);
-  }
+  const { state, dispatch } = useContext(CartContext);
 
   // Handle single product state
   const { id } = useParams();
@@ -35,13 +29,14 @@ function ProductPage() {
   }
 
   if (product) {
+    console.log("Product: ", product);
     return (
       <div className="product-container">
         <div key={product.id} className="product-card">
           <h2 className="h2-card">{product.title}</h2>
           <div className="text-div-product-card">
             <span>{product.description}</span>
-            <span>Discounted price: {product.discountedPrice} NOK</span>
+            <span>Discounted price: {maxTwoDecimals(product.discountedPrice)} NOK</span>
             {product.price - product.discountedPrice > 0 && (
               <span>You save: {product.price - product.discountedPrice} NOK</span>
               )}
@@ -57,10 +52,10 @@ function ProductPage() {
             </li>
             ))}
           </ul>
-          <button onClick={() => addProductToCart(product)} className="cta-button">
+          <Link to="/checkout/" className="cta-link"><button className="cta-button">See cart and purchase</button></Link>
+          <button onClick={() => dispatch({ type: 'addProduct', payload: product })} className="cta-button">
             Add to cart
             </button>
-          <Link to="/checkout/" className="cta-link"><button className="cta-button">See cart and purchase</button></Link>
         </div>
       </div>
     );

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Routes, Route, Link, Outlet, useParams } from "react-router-dom";
+import React from "react";
+import { Routes, Route, Outlet } from "react-router-dom";
 import Header from "./components/header/header.js";
 import Footer from "./components/footer/footer.js";
 import ProductPage from "./components/productPage/productPage.js";
@@ -19,7 +19,7 @@ function Home() {
 }
 
 function RouteNotFound() {
-  return <main>Page not found</main>
+  return <main>This page was not found. You follow old Rafiki, he knows the way!</main>
 }
 
 // The <Outlet> from react-router-dom displays any child routes, almost like

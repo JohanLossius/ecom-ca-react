@@ -1,20 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from "react-router-dom";
 import "./productCards.scss";
 import ProductsApiStates from "../api/productsApiStates.js";
 import apiUrl from "../api/api.js";
-import CartContext from "../checkout/cart/cartContext.js";
-import { useContext } from "react";
+import CartContext, { useCart, maxTwoDecimals } from "../checkout/cart/cartHandler.js";
 
 // Products API output
 function ProductCards() {
-  
-  // Cart context
-  const { cartProducts, setCartProducts } = useContext(CartContext);
 
-  function addProductToCart(product) {
-    setCartProducts([...cartProducts, product]);
-  }
+  // Cart context
+  const { state, dispatch } = useContext(CartContext);
   
   // Handle products API state
   const { products, isLoading, isError } = ProductsApiStates(
@@ -74,12 +69,14 @@ function ProductCards() {
               <h2 className="h2-card">{product.title}</h2>
               <div className="text-div-product-card">
                 <span>{product.description}</span>
-                <span>Discounted price: {product.discountedPrice} NOK</span>
-                <span>Discount: {product.price - product.discountedPrice} NOK</span>
+                <span>Discounted price: {maxTwoDecimals(product.discountedPrice)} NOK</span>
+                {product.price - product.discountedPrice > 0 && (
+                  <span>Discount: {maxTwoDecimals(product.price - product.discountedPrice)} NOK</span>
+                )}
               </div>
               <img src={product.image.url} alt={product.title} className="product-card-img"/>
               <Link to={`/product/${product.id}`}><button className="cta-button">View product</button></Link>
-              <button onClick={() => addProductToCart(product)} className="cta-button">Add to Cart</button>
+              <button onClick={() => dispatch({ type: 'addProduct', payload: product })} className="cta-button">Add to cart</button>
             </div>
           ))) : (
             <div>Sorry, cabron! The hyenas ran away with part of our storage. There are no results that match your search!</div>

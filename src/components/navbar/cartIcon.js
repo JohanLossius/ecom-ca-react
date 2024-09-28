@@ -1,21 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import "./cartIcon.scss";
-import CartContext, { CartProvider } from "../checkout/cart/cartContext.js";
-import { useContext } from "react";
+import CartContext, { useCart } from "../checkout/cart/cartHandler.js";
 
 function CartIcon() {
   
-  const { cartProducts } = useContext(CartContext);
-  
-  const cartProductCount = cartProducts.length ? cartProducts.length : 0;
+  const { state } = useContext(CartContext);
 
   return (
     <div>
-      <Link exact to="/checkout/" className="cart-icon-a-tag" >
+      <Link to="/checkout/" className="cart-icon-a-tag" >
           <img src="/shopping-cart-icon3.png" alt="Shopping cart" className="shopping-cart-class"/>
           <div className="products-in-cart-div">
-            <div className="product-count-cart">{cartProductCount}</div>
+            {state.productQuantity > 0 ? (
+              <div className="product-count-cart">{state.productQuantity}</div>
+            ) : ( <div className="product-count-cart">&nbsp;</div>
+            )}
           </div>
       </Link>
     </div>
