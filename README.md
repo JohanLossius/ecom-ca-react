@@ -1,5 +1,5 @@
-# eCommerce course assignment - Javascript frameworks, React
-Johan Lossius eCommerce store for the React Course Assignment.
+# eCommerce Store
+Johan Lossius eCommerce store for the Javascript Frameworks, React, Course Assignment.
 
 ## Getting started with the development:
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -69,6 +69,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 This web site was built mainly with the following technologies:
 - SASS V1.77.8 is used with modular styling files
 - React 18.3.1
+
 There were many other dependencies and programs used for the development, and they can be seen in the package.json file.
 Many of the listed were not actively used, but just installed via the set-up or for some troubleshooting troughout.
 This is reccommended going forward to avoid vulnerabilities etc., and use sound judgement for what's needed and not.
@@ -79,7 +80,8 @@ I would reccommend switching over to Vite.js for a better development experience
 Write code that is logical in its syntax, and well structured so that it makes sense and provides clarity, simply by reading it.
 Also ensure simple documentation throughout when purposeful, but not just for the sake of doing it.
 
-**Please note regarding building value & functionality for the site**
+**Please note regarding building value & functionality for the site:**
+
 Focus on features that provide incredible value to the end user - simplicity and raw value to the user - and no fluff.
 Some of the best web sites I've ever seen have poor UI and look unpolished & rough, but because they ONLY include exactly what the user needs, they provide incredible value.
 The mental clarity for the end user is incredible and this trumphs the lack of polish by a 100x. In fact - often a design that is overly done can often confuse the user by drawing attention to insignificant details that take the focus away from the important things.
