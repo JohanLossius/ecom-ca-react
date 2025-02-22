@@ -8,18 +8,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 clone https://github.com/JohanLossius/ecom-ca-react.git
 If you are using GitHub Desktop and Visual Studio Code editor, simply launch and install it via GitHub Desktop by pulling it from the GitHub repo and follow the instructions of the program until you're setup in Visual Studio Code.
 
-OR
+**OR**
 
 - You can also pull it directly into VS code from GitHub by adding:
 ```
 git remote add origin https://github.com/JohanLossius/ecom-ca-react.git
 ```
-- and then
+
+And then pull it:
 ```
 git pull origin main
 ```
 
-- And then install it. Run:
+And then install it:
 ```
 npm i
 ```
