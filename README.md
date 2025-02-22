@@ -14,7 +14,7 @@ OR
 ```
 git remote add origin https://github.com/JohanLossius/ecom-ca-react.git
 ```
-and then
+- and then
 ```
 git pull origin main
 ```
@@ -37,8 +37,7 @@ The page will reload when you make changes.\
 
 You may also see any lint errors in the console.
 
-**Note from Johan regarding watch changes**
-
+**Note from Johan regarding watch changes:**
 I have not been able to make the watch functionality work. So I have had to restart the dev server with "ctrl+C" and "npm run start" in the terminal each time checking new changes.
 
 ### `npm test`
@@ -85,7 +84,7 @@ I would reccommend switching over to Vite.js for a better development experience
 Write code that is logical in its syntax, and well structured so that it makes sense and provides clarity, simply by reading it.
 Also ensure simple documentation throughout when purposeful, but not just for the sake of doing it.
 
-**Please note regarding building value & functionality for the site:**
+### Please note regarding building value & functionality for the site:
 
 Focus on features that provide incredible value to the end user - simplicity and raw value to the user - and no fluff.
 Some of the best web sites I've ever seen have poor UI and look unpolished & rough, but because they ONLY include exactly what the user needs, they provide incredible value.
