@@ -13,6 +13,9 @@ OR
 - You can also pull it directly into VS code from GitHub by adding:
 ```
 git remote add origin https://github.com/JohanLossius/ecom-ca-react.git
+```
+and then
+```
 git pull origin main
 ```
 
@@ -34,7 +37,8 @@ The page will reload when you make changes.\
 
 You may also see any lint errors in the console.
 
-**Note from Johan regarding watch changes:**
+**Note from Johan regarding watch changes**
+
 I have not been able to make the watch functionality work. So I have had to restart the dev server with "ctrl+C" and "npm run start" in the terminal each time checking new changes.
 
 ### `npm test`
@@ -55,9 +59,10 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `npm run eject`
 
 **Note from Johan regarding eject**
+
 The eject command was run at some point in the development process of this react app. The reason for this was to troubleshoot some functionality/syntax that was not accessible without ejecting. As far as I remember, while troubleshooting the eslintrc.json file
 
-**Note: Explanation of the eject opretaion: This is a one-way operation. Once you `eject`, you can't go back!**
+**Explanation of the eject command: This is a one-way operation. Once you `eject`, you can't go back!**
 
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
@@ -67,8 +72,8 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## Technologies & styling:
 This web site was built mainly with the following technologies:
-- SASS V1.77.8 is used with modular styling files
-- React 18.3.1
+- SASS v1.77.8 is used with modular styling files
+- React v18.3.1
 
 There were many other dependencies and programs used for the development, and they can be seen in the package.json file.
 Many of the listed were not actively used, but just installed via the set-up or for some troubleshooting troughout.
