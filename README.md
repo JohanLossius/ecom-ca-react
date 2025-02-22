@@ -12,17 +12,19 @@ If you are using GitHub Desktop and Visual Studio Code editor, simply launch and
 
 **OR**
 
-You can also pull it directly into VS code from GitHub by adding:
+You can also pull it directly into VS code from GitHub.
+
+**Add:**
 ```
 git remote add origin https://github.com/JohanLossius/ecom-ca-react.git
 ```
 
-And then pull it:
+**Then pull:**
 ```
 git pull origin main
 ```
 
-And then install it:
+**Then install:**
 ```
 npm i
 ```
