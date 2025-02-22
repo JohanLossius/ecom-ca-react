@@ -1,5 +1,5 @@
-# eCommerce Store
-Johan Lossius eCommerce store for the Javascript Frameworks, React, Course Assignment.
+# Best eCommerce Store Ever
+**Javascript Frameworks Course Assignment**
 
 ![The best eCommerce Store Ever!](/public/image.png)
 
