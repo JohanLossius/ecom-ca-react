@@ -1,7 +1,7 @@
 # eCommerce Store
 Johan Lossius eCommerce store for the Javascript Frameworks, React, Course Assignment.
 
-![The best eCommerce Store Ever!](image.png)
+![The best eCommerce Store Ever!](/public/image.png)
 
 ## Getting started with the development:
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
