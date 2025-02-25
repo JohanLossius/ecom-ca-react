@@ -57,6 +57,7 @@ a {
   font-size: large;
   font-weight: bold;
   border-radius: 25px;
+  cursor: pointer;
   background-color: variables.$primary;
   color: variables.$tertiary;
   @include breakpoints.md {
@@ -83,11 +84,6 @@ a {
   }
 }
 
-// .primary-cta {
-//   background-color: variables.$secondary-shadow;
-//   color: variables.$primary-shadow;
-// }
-
 .cta-link {
   text-align: center;
   margin: 0 auto;
@@ -99,4 +95,5 @@ a {
   font-size: large;
   font-weight: bold;
   padding: 5px;
+  cursor: pointer;
 }

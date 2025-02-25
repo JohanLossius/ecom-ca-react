@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import "./header.scss";
-import Nav from "../navbar/nav.js";
-import CartIcon from "../navbar/cartIcon.js";
-import Logo from "../navbar/logo.js";
+import Nav from "../navbar/nav.jsx";
+import CartIcon from "../navbar/cartIcon.jsx";
+import Logo from "../navbar/logo.jsx";
 
 function Header() {
   return (

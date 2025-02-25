@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import "./cartIcon.scss";
-import CartContext, { useCart } from "../checkout/cart/cartHandler.js";
+import CartContext from "../checkout/cart/cartHandler.jsx";
 
 function CartIcon() {
   

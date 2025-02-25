@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./productPage.scss";
-import SingleProductApiStates from "../api/singleProductApiState.js";
+import SingleProductApiStates from "../api/singleProductApiState.jsx";
 import apiUrl from "../api/api.js";
-import CartContext, { useCart, maxTwoDecimals } from "../checkout/cart/cartHandler.js";
+import CartContext, { maxTwoDecimals } from "../checkout/cart/cartHandler.jsx";
 
 // Product page output
 function ProductPage() {
 
   // Cart context
-  const { state, dispatch } = useContext(CartContext);
+  const { dispatch } = useContext(CartContext);
 
   // Handle single product state
   const { id } = useParams();
@@ -25,11 +25,10 @@ function ProductPage() {
   }
 
   if (isError) {
-    return <div>There was an error: {isError}. Have you spoken with the meercats?</div>;
+    return <div>There was an error: {isError}.</div>;
   }
 
   if (product) {
-    // console.log("Product: ", product);
     return (
       <div className="product-container">
         <div key={product.id} className="product-card">

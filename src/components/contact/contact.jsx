@@ -65,7 +65,7 @@ function Contact() {
   };
 
   function onSubmitHandler(data) {
-    console.log("onSubmit data:", data);
+    // console.log("onSubmit data:", data);
     setSubmittedData(data);
     reset();
   }
@@ -83,8 +83,7 @@ function Contact() {
               <span className="span-contact">Subject: <span className="submitted-data-span">{submittedData.subject}</span></span>
               <span className="span-contact">Message: <span className="submitted-data-span">{submittedData.body}</span></span>
             </div>
-            <p className="p-contact">We'll have the sloths run through the paperwork asap, and at the latest in 60 working days.</p>
-            <p className="p-contact">Do you need a quicker feedback? Call for the owls.</p>
+            <p className="p-contact">We'll get back to you shortly.</p>
           </div>
         ) : (
           <div>

@@ -6,7 +6,6 @@ function Nav() {
   return (
     <nav>
       <div className="nav-item-div">
-        {/* <NavLink to="/" activeClassName="active">Home</NavLink> */}
         <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}> Home</NavLink>
       </div>
       <div className="nav-item-div">

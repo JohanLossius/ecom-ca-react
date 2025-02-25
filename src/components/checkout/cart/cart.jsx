@@ -1,22 +1,15 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./cart.scss";
-import CartContext, { useCart, maxTwoDecimals } from "./cartHandler.js";
+import CartContext, { maxTwoDecimals } from "./cartHandler.jsx";
 
 function Cart() {
 
   const { state, dispatch } = useContext(CartContext);
 
-  // Console logging functionality for debugging purposes
-  // useEffect(() => {
-  //   console.log("Cart state: ", JSON.stringify(state.cart));
-  //   console.log("Total price: ", JSON.stringify(state.totalPrice));
-  //   console.log("Product quantity ", JSON.stringify(state.productQuantity));
-  // }, [state.cart, state.totalPrice, state.productQuantity]);
-
   return (
     <div>
-      <img src="/shopping-cart-icon3.png" className="shopping-cart-class shopping-cart-title"/>
+      <img src="/shopping-cart-icon3.png" className="shopping-cart-class shopping-cart-title" alt="shopping cart"/>
         {state.cart.length >= 1 ? (
           <div>
             <div className="cart-products-cont">
@@ -56,35 +49,3 @@ function Cart() {
 }
 
 export default Cart;
-
-// function Cart2() {
-
-//   const { state, dispatch } = useContext(CartContext);
-
-//   return (
-//     <div>
-//       {state.cart.length >= 1 ? (
-//         state.cart.map((product) => (
-//           <div key={product.id}>
-//             <button onClick={() => dispatch({ type: 'addProduct', payload: product })}>Add {product.title}</button>
-//             <button onClick={() => dispatch({ type: 'removeProduct', payload: product })}>Remove {product.title}</button>
-//           </div>
-//         ))
-//       ) : (
-//         <div>
-//           <h4>Oh no!! Your cart is empty!!</h4>
-//           <Link to={`/`} className="cta-link"><button className="cta-button">Back to Store</button></Link>
-//         </div>
-//       )}
-//       <div>
-//         <div>You have {state.cart.length === 0 ? 0 : state.productQuantity} products in your cart.</div>
-//         <button onClick={() => dispatch({ type: 'clearCart' })} className="cta-button" >Clear cart</button>
-//       </div>
-//       {state.cart.length >= 1 ? (
-//         <div>Total price to be paid: {state.totalPrice}</div>
-//       ) : (
-//         <div></div>
-//       )}
-//     </div>
-//   );
-// }

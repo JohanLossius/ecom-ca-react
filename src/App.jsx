@@ -1,12 +1,12 @@
 import React from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
-import Header from "./components/header/header.js";
-import Footer from "./components/footer/footer.js";
-import ProductPage from "./components/productPage/productPage.js";
-import Checkout from "./components/checkout/checkout.js";
-import CheckoutSuccess from "./components/checkoutSuccess/checkoutSuccess.js";
-import Contact from "./components/contact/contact.js";
-import ProductCards from "./components/productCards/productCards.js";
+import Header from "./components/header/header.jsx";
+import Footer from "./components/footer/footer.jsx";
+import ProductPage from "./components/productPage/productPage.jsx";
+import Checkout from "./components/checkout/checkout.jsx";
+import CheckoutSuccess from "./components/checkoutSuccess/checkoutSuccess.jsx";
+import Contact from "./components/contact/contact.jsx";
+import ProductCards from "./components/productCards/productCards.jsx";
 
 // Front page with products
 function Home() {

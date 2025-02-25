@@ -1,5 +1,4 @@
-import React, { useReducer, createContext, useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useReducer, createContext } from "react";
 import "./cart.scss";
 
 const CartContext = createContext();
@@ -14,7 +13,6 @@ export const CartProvider = ({ children }) => {
   );
 }
 
-// Handle max 2 decimals functionality
 export function maxTwoDecimals(price) {
   if (price % 1 === 0) {
     return price.toFixed(0);
@@ -137,7 +135,6 @@ function cartReducer(state, action) {
 
       return { ...state, cart: cart, totalPrice: newTotal, productQuantity: newQuantity };
 
-    // Clear the cart
     case "clearCart":
       return { cart: [], totalPrice: 0, productQuantity: 0 };
 

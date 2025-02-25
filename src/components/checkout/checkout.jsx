@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Cart from "./cart/cart.js";
+import Cart from "./cart/cart.jsx";
 
 function Checkout() {
   return (

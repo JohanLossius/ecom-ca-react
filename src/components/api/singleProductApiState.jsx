@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 // Product list API state management
-function ProductsApiStates(url) {
-  const [products, setProducts] = useState([]);
+function SingleProductApiStates(url) {
+  const [product, setProducts] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
@@ -27,7 +26,7 @@ function ProductsApiStates(url) {
     fetchData();
   }, [url]);
 
-  return { products, isLoading, isError };
+  return { product, isLoading, isError };
 }
 
-export default ProductsApiStates;
+export default SingleProductApiStates;

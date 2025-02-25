@@ -1,8 +1,6 @@
 @use "../../styles/breakpoints";
 @use "../../styles/variables";
 
-// These styles are imported directly into App.js, and as such will apply to all components.
-
 .product-card-img {
   width: 50%;
   height:auto;

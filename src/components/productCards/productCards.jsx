@@ -1,15 +1,15 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import "./productCards.scss";
-import ProductsApiStates from "../api/productsApiStates.js";
+import ProductsApiStates from "../api/productsApiStates.jsx";
 import apiUrl from "../api/api.js";
-import CartContext, { useCart, maxTwoDecimals } from "../checkout/cart/cartHandler.js";
+import CartContext, { maxTwoDecimals } from "../checkout/cart/cartHandler.jsx";
 
 // Products API output
 function ProductCards() {
 
   // Cart context
-  const { state, dispatch } = useContext(CartContext);
+  const { dispatch } = useContext(CartContext);
   
   // Handle products API state
   const { products, isLoading, isError } = ProductsApiStates(
@@ -33,11 +33,11 @@ function ProductCards() {
   }
 
   if (isError) {
-    return <div>There was an error: {isError}. Have you spoken with the meercats?</div>;
+    return <div>There was an error: {isError}.</div>;
   }
 
   if (products.length === 0) {
-    return <div>Sorry, brotha, but the hamster needs a rest. There are no products to display!</div>;
+    return <div>The hamster needs a rest. There are no products to display!</div>;
   }
 
   if (products.length >= 1) {
@@ -79,7 +79,7 @@ function ProductCards() {
               <button onClick={() => dispatch({ type: "addProduct", payload: product })} className="cta-button">Add to cart</button>
             </div>
           ))) : (
-            <div>Sorry, cabron! The hyenas ran away with part of our storage. There are no results that match your search!</div>
+            <div>There are no results that match your search!</div>
           )}
         </div>
       </section>
